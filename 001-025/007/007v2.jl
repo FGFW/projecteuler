@@ -5,7 +5,7 @@ https://projecteuler.net/problem=7
 2016年4月7日 00:23:25 codegay
 """=#
 #julia primes([start,]end)函数,默认会生成小于等于end的素数数组
-#-_-只要end够大一定能第10001个素数...但是end太大的话会把内存吃光。
+#-_-只要end够大一定能包含第10001个素数...但是end太大的话会把内存吃光。
 
 counter=0
 for r in primes(99999999)
