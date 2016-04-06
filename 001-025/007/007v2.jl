@@ -1,17 +1,22 @@
 #="""
+#方法二
 julia解欧啦计划第七题10001st prime 
 https://projecteuler.net/problem=7
-2016年4月6日 05:59:30 codegay
+2016年4月7日 00:23:25 codegay
 """=#
-result=[]
-for r in countfrom(3,2)
-if isprime(r) 
-append!(result,[r])
-if length(result)==10000
+#julia primes([start,]end)函数,默认会生成小于等于end的素数数组
+#-_-只要end够大一定能第10001个素数...但是end太大的话会把内存吃光。
+
+counter=0
+for r in primes(99999999)
+counter+=1
+if counter==10001
 println(r)
 break
 end
 end
-end
 #104743
-#[Finished in 4.4s]
+#[Finished in 3.9s]
+
+#primes(99999999)[10001] 可以这样一行流
+println(@time primes(99999999)[10001])
