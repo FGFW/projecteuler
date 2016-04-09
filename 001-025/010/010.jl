@@ -9,6 +9,7 @@ Find the sum of all the primes below two million.
 所有小于10的素数的和是2 + 3 + 5 + 7 = 17。
 求所有小于两百万的素数的和。
 =#
+
 #-_-无耻一行流
 @time result=sum(primes(2000000))
 @show result
