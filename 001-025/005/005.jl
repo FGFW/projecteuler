@@ -1,5 +1,7 @@
 #=
 julia解欧拉计划005-求最小同时都能被1-20整除的数
+https://projecteuler.net/problem=5
+2016年4月13日 21:03:03 codegay
 =#
 
 function ff1()
@@ -20,4 +22,12 @@ end
 232792560
   5.726657 seconds (232.85 M allocations: 3.472 GB, 2.59% gc time)
 [Finished in 9.6s]
+=#
+
+#julia 一行流
+@time @show (2^4*3^2)*(*(primes(4,20)...))
+
+#=
+(2 ^ 4 * 3 ^ 2) * (*)(primes(4,20)...) = 232792560
+  0.000319 seconds (35 allocations: 1.750 KB)
 =#
